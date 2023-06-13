@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<!-- 주석 -->
+	<head>
+		<meta charset="UTF-8">
+		<title>채팅</title>
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+		<script>
+			$(function() {
+				var textcounter = 0;
+				$("#inputTextBox").focus();
+				$("#inputTextBox").on("keyup", function(key) {
+					if (key.keyCode == 13) {
+						var inputText = $("#inputTextBox").val();
+						if (inputText != "") {
+							$("#contetsbox").append("<div id='detailtext" + textcounter + "' class='detailtextstyle'>" + inputText + "<img id='deletebutton" + textcounter + "' value='" + textcounter + "' class='xbutton' src='x-mark.png'></div>");
+							$("#deletebutton" + textcounter).click(function() {
+								var currentCount = $(this).attr("value");
+								console.log(currentCount);
+								$("#detailtext" + currentCount).remove();
+							});
+							$("#inputTextBox").val("");
+							$("#inputTextBox").focus();
+							textcounter++;
+
+							fetch("https://dapi.kakao.com/v2/search/web?sort=accuracy&page=1&size=10&query=" + inputText, {
+									method: 'GET',
+									headers: {
+										'Content-Type': 'application/json',
+										'Authorization': 'KakaoAK 0cc394034023544d68dcff0a84e5c99d'
+									}
+								})
+								.then(response => response.json())
+								.then(json => {
+									console.log(json);
+									inputText = json.documents[0].contents;
+									$("#contetsbox").append("<div id='detailtext" + textcounter + "' class='detailtextstyle'>" + inputText + "<img id='deletebutton" + textcounter + "' value='" + textcounter + "' class='xbutton' src='x-mark.png'></div>");
+									$("#deletebutton" + textcounter).click(function() {
+										var currentCount = $(this).attr("value");
+										console.log(currentCount);
+										$("#detailtext" + currentCount).remove();
+									});
+									$("#inputTextBox").val("");
+									$("#inputTextBox").focus();
+									textcounter++;
+								});
+						}
+					}
+				});
+			});
+		</script>
+		<style>
+			.xbutton {
+				width: 30px;
+				height: 30px;
+			}
+			.titleboxstyle {
+				width: 100%;
+				background-color: #F5CD83;
+				text-align: center;
+				font-size: 20px;
+				color: white;
+				font-family: 'Oswald', sans-serif;
+			}
+			.contentsboxstyle {
+				width: 100%;
+				background-color: #CAF583;
+			}
+			.mainstyle {
+				width: 500px;
+				background-color: #F5CD83;
+			}
+			.detailtextstyle {
+				width: 90%;
+				margin-left: 5%;
+				margin-right: 5%;
+				margin-bottom: 10px;
+				background-color: white;
+			}
+			.inputboxstyle {
+				width: 67%;
+				margin-left: 10%;
+				font-size: 20px;
+				position: relative;
+			}
+
+			 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+			html{font-family: 'Oswald', sans-serif; }
+
+
+
+    		@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@400;500&display=swap');
+      		html{font-family: 'Dancing Script', cursive;}
+
+		</STYLE>
+	</HEAD>
+	<BODY>
+		<div id="mainframe" class="mainstyle">
+			<div id="titlebox" class="titleboxstyle">ReadYourMind</div>
+			<div style="overflow: scroll; width: 500px; height: 600px;" id="contetsbox" class="contentsboxstyle"></div>
+			<div id="inputbox">
+			<input type="text" id="inputTextBox" class="inputboxstyle">
+			<input style="" type="button" value="전송" onclick="">
+			</div>
+
+		</div>
+	</BODY>
+</HTML>
