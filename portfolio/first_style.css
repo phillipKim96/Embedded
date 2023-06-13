@@ -1,0 +1,288 @@
+    .video-background {
+      position: fixed; /* 비디오를 고정 배경으로 설정하기 위해 position 속성을 fixed로 설정합니다 */
+      top: 0;
+      left: 0;
+      width: 1920px;
+/*      height: 100%;*/
+      z-index: -1; /* 배경 비디오가 다른 요소들 뒤에 표시되도록 z-index를 설정합니다 */
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+    h1 {
+      font-size: 72px;
+      font-family:'Oswald', sans-serif;  
+    }
+ 
+
+    .parents {
+      margin: 60px;
+      margin-left: 190px; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 500px);
+      grid-template-rows: repeat(3, 300px);
+
+    }
+    .parents > div {
+      margin: 10px; 
+      background-color: white ;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      opacity:0.8;
+
+    }
+
+    .parents > div {
+      font-family: 'Oswald';
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .img1
+    { 
+      margin-left: 100px;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }  
+
+     .parents1 {
+      margin: 60px;
+      margin-left: 190px; 
+      display: grid;
+      grid-gap: 10px;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      grid-column-start:1;
+      grid-column-end: 3;
+    }
+    .parents1 > div {
+      margin: 10px; 
+      background-color: white ;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      opacity:0.8;
+
+    }
+
+    .parents1 > div {
+      font-family: 'Oswald';
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+     .parents2 {
+      margin: 60px;
+      margin-left: 190px; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(1, 500px);
+      grid-template-rows: repeat(1, 300px);
+
+    }
+    .parents2 > div {
+      margin: 10px; 
+      background-color: white ;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      opacity:0.8;
+
+    }
+
+    .parents2 > div {
+      font-family: 'Oswald';
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+     .parents3 {
+      margin: 60px;
+      margin-left: 190px; 
+      display: grid;
+      grid-gap: 10px;
+      grid-row-start: 1;
+      grid-row-end: 3;
+
+    }
+    .parents3 > div {
+      margin: 10px; 
+      background-color: white ;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      opacity:0.8;
+
+    }
+
+    .parents3 > div {
+      font-family: 'Oswald';
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+     .parents4 {
+      margin: 60px;
+      margin-left: 190px; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 500px);
+      grid-template-rows: repeat(3, 300px);
+
+    }
+    .parents4 > div {
+      margin: 10px; 
+      background-color: white ;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      opacity:0.8;
+
+    }
+
+    .parents4 > div {
+      font-family: 'Oswald';
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+     .parents5 {
+      margin: 60px;
+      margin-left: 190px; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 500px);
+      grid-template-rows: repeat(3, 300px);
+
+    }
+    .parents5 > div {
+      margin: 10px; 
+      background-color: white ;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      opacity:0.8;
+
+    }
+
+    .parents5 > div {
+      font-family: 'Oswald';
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+     .parents6 {
+      margin: 60px;
+      margin-left: 190px; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 500px);
+      grid-template-rows: repeat(3, 300px);
+
+    }
+    .parents6 > div {
+      margin: 10px; 
+      background-color: white ;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      opacity:0.8;
+
+    }
+
+    .parents6 > div {
+      font-family: 'Oswald';
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+     .parents7 {
+      margin: 60px;
+      margin-left: 190px; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 500px);
+      grid-template-rows: repeat(3, 300px);
+
+    }
+    .parents7 > div {
+      margin: 10px; 
+      background-color: white ;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      opacity:0.8;
+
+    }
+
+    .parents7 > div {
+      font-family: 'Oswald';
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+        }
+
+     .parents8 {
+      margin: 60px;
+      margin-left: 190px; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 500px);
+      grid-template-rows: repeat(3, 300px);
+
+    }
+    .parents8 > div {
+      margin: 10px; 
+      background-color: white ;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      opacity:0.8;
+
+    }
+
+    .parents8 > div {
+      font-family: 'Oswald';
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+     .parents9 {
+      margin: 60px;
+      margin-left: 190px; 
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 500px);
+      grid-template-rows: repeat(3, 300px);
+
+    }
+    .parents9 > div {
+      margin: 10px; 
+      background-color: white ;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      opacity:0.8;
+
+    }
+
+    .parents9 > div {
+      font-family: 'Oswald';
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+
+
+
+
+
+
+
+
+
+
